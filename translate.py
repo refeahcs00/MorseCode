@@ -38,4 +38,4 @@ def translate(code: str):
     if not bool(pattern.match(code)):
         raise Exception("Invalid Morse Code!")
 
-    return "".join(alpha.get(x, f" UNK {x} ") for x in code.split("||"))
+    return "".join(alpha[x] for x in code.split("||"))
